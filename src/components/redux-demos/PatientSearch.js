@@ -45,19 +45,28 @@ const PatientSearch = (props) => {
         <div style={{ border: '5px solid purple' }}>
         <br />
 
+        <table border="0">
         Patient List:
 
-        <ol> 
-        {props.searchedPatients && props.searchedPatients.map( (item,key) => <li key={key}> {item.name} </li> )}
-        </ol>
+        {props.patients && props.patients.map( (item,key) => 
+        <tr>
+            <td> {key} </td> 
+            <td> {item.name} </td> 
+            <td> {item.email} </td>
+        </tr> )}
+        
+        </table>
 
-        <tr> 
-        {props.searchedPatients && props.searchedPatients.map( (item,key) => <li key={key}> {item.name} </li> )}
-        </tr>
-
-        <td> 
-        {props.searchedPatients && props.searchedPatients.map( (item,key) => <li key={key}> {item.email} </li> )}
-        </td>
+        <table border="7">
+        
+        {props.searchedPatients && props.searchedPatients.map( (item,key) => 
+        <tr>
+            <td>{key} </td> 
+            <td> {item.name} </td> 
+            <td> {item.email} </td>
+        </tr>)}
+        
+        </table>
 
 
         <br/><br/>

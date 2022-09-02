@@ -8,15 +8,32 @@ const PatientSearchCount = (props) => {
             Patient Count: {props.patients && props.patients.length} 
         </center>
 
+        {/* <table border="0">
         Patient List:
 
-        <ol> 
-        {props.patients && props.patients.map( (item,key) => <li key={key}> {item.name} </li> )}
-        </ol>
+        {props.patients && props.patients.map( (item,key) => 
+        <tr>
+            <td> {key} </td> 
+            <td> {item.name} </td> 
+            <td> {item.email} </td>
+        </tr> )}
+        
+        </table> */}
 
-        <ol> 
-        {props.searchedPatients && props.searchedPatients.map( (item,key) => <li key={key}> {item.name} </li> )}
-        </ol>
+        {/* <table border="7">
+        
+        {props.searchedPatients && props.searchedPatients.map( (item,key) => 
+        <tr>
+            <td>{key} </td> 
+            <td> {item.name} </td> 
+            <td> {item.email} </td>
+        </tr>)}
+        
+        </table> */}
+
+        {/* <td> 
+        {props.searchedPatients && props.searchedPatients.map( (item,key) => <li key={key}> {item.email} </li> )}
+        </td> */}
 
         <br/><br/>
 
